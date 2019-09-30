@@ -5,6 +5,10 @@ from django.contrib import messages
 
 
 # Create your views here.
+def logout(request):
+    auth.logout(request)
+    return redirect("/")
+
 
 def login(request):
     if request.method=="POST":
